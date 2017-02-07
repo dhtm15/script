@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove sendmail*;
