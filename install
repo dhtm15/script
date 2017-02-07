@@ -23,7 +23,7 @@ chmod +x *
 mv * /bin
 cd
 read -p "Aperte enter para continuar a instalação das payloads"
-bash payloads
+bash payload
 read -p "Aperte enter para continuar a instalar as configurações ssh"
 bash ssh
 read -p "Aperte enter para continuar para instalar os fixs"
