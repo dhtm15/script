@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 rm -rf /etc/ssh/sshd_config
 touch /etc/ssh/sshd_config
 echo "Port 22
