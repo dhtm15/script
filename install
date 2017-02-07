@@ -12,8 +12,8 @@ mIP=`wget http://ipecho.net/plain -O - -q ; echo`
 echo "O IP da sua VPS é:" $mIP
 read -p "Aperte enter para continuar removendo conteúdos inuteis"
 bash limpar
-#read -p "Aperte enter para continuar a fazer instalações e upgrades na VPS"
-#bash atualizar
+read -p "Aperte enter para continuar a fazer instalações e upgrades na VPS"
+bash atualizar
 read -p "Aperte enter para continuar a instalar VpsPack"
 git clone https://github.com/RicKbrL/VpsPack.git
 cd VpsPack
