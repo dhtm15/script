@@ -10,10 +10,6 @@ nos passo a passo que irá lhe pedir, pois se você não
 ficar atento, vai acabar tendo que retir tudo de novo"
 mIP=`wget http://ipecho.net/plain -O - -q ; echo`
 echo "O IP da sua VPS é:" $mIP
-read -p "Aperte enter para fazer download das scripts"
-git clone https://github.com/dhtm15/script.git
-mv ~/script /root
-chmod 777 *
 read -p "Aperte enter para continuar removendo conteúdos inuteis"
 bash limpar
 read -p "Aperte enter para continuar a fazer instalações e upgrades na VPS"
