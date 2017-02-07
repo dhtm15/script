@@ -1,4 +1,5 @@
 #/bin/bash
+mIP=`wget http://ipecho.net/plain -O - -q ; echo`
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
 echo "acl ip dstdomain $mIP
