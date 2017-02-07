@@ -20,7 +20,7 @@ cd VpsPack
 rm -rf README.md
 rm -rf install
 for arqs in `ls`
-rm /bin/$arqs 2>/dev/null
+rm /bin/$arqs
 mv $arqs /bin
 chmod +x /bin/$arqs
 cd
