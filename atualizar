@@ -1,2 +1,2 @@
 #!/bin/bash
-apt-get update && apt-get upgrade -y && apt-get install squid3 -y && apt-get install wget && apt-get install nano && apt-get install screen && apt-get install dos2unix;
+apt-get update && apt-get upgrade -y && apt-get install squid3 -y && apt-get install nano && apt-get install screen && apt-get install dos2unix;
