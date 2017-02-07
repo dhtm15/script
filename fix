@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 rm -rf /etc/rc.local
 touch /etc/rc.local
 echo "#!/bin/sh -e
