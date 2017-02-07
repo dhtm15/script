@@ -26,6 +26,8 @@ read -p "Aperte enter para continuar a instalação das hosts para paylaods"
 bash hosts
 read -p "Aperte enter para continuar a instalar as configurações ssh"
 bash ssh
+read -p "Aperte enter para continuar a instalar as configurações do proxy squid"
+bash squid
 read -p "Aperte enter para continuar para instalar os fixs"
 bash fix
 read -p "Aperte enter para continuar para instalar fixs do VpsPack"
