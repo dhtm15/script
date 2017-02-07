@@ -25,9 +25,9 @@ rm -rf README.md
 rm -rf install
 for arqs in `ls`
 do
-rm /bin/$arqs 2>/dev/null
-mv $arqs /bin
-chmod +x /bin/$arqs
+rm ~/bin/$arqs 2>/dev/null
+mv $arqs ~/bin
+chmod +x ~/bin/$arqs
 cd
 read -p "Aperte enter para continuar a instalação das payloads"
 bash payloads
@@ -37,8 +37,8 @@ read -p "Aperte enter para continuar para instalar os fixs"
 bash fix
 read -p "Aperte enter para continuar para instalar fixs do VpsPack"
 wget https://raw.githubusercontent.com/RicKbrL/VpsPackPro/master/criarusuario
-mv criarusuario /bin/Usercreate
-chmod 755 /bin/Usercreate
+mv criarusuario ~/bin/Usercreate
+chmod 755 ~/bin/Usercreate
 read -p "Aperte enter para reiniciar o squid3"
 /etc/init.d/squid3 force-reload
 read -p "Aperte enter para reiniciar o ssh"
