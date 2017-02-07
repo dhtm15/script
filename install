@@ -22,8 +22,8 @@ rm -rf install
 chmod +x *
 mv * /bin
 cd
-read -p "Aperte enter para continuar a instalação das payloads"
-bash payload
+read -p "Aperte enter para continuar a instalação das hosts para paylaods"
+bash hosts
 read -p "Aperte enter para continuar a instalar as configurações ssh"
 bash ssh
 read -p "Aperte enter para continuar para instalar os fixs"
