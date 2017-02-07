@@ -15,16 +15,7 @@ bash limpar
 read -p "Aperte enter para continuar a fazer instalações e upgrades na VPS"
 bash atualizar
 read -p "Aperte enter para continuar a instalar VpsPack"
-git clone https://github.com/RicKbrL/VpsPack.git
-cd VpsPack
-rm -rf README.md
-rm -rf install
-for arqs in `ls`
-do
-rm ~/bin/$arqs 2>/dev/null
-mv $arqs ~/bin
-chmod +x ~/bin/$arqs
-cd
+wget https://raw.githubusercontent.com/RicKbrL/VpsPack/master/install && bash install;
 read -p "Aperte enter para continuar a instalação das payloads"
 bash payloads
 read -p "Aperte enter para continuar a instalar as configurações ssh"
