@@ -19,10 +19,8 @@ git clone https://github.com/RicKbrL/VpsPack.git
 cd VpsPack
 rm -rf README.md
 rm -rf install
-for arqs in `ls`
-rm /bin/$arqs
-mv $arqs /bin
-chmod +x /bin/$arqs
+chmod +x *
+mv * /bin
 cd
 read -p "Aperte enter para continuar a instalação das payloads"
 bash payloads
