@@ -41,5 +41,5 @@ read -p "Aperte enter para reiniciar o ssh"
 read -p "Aperte enter para continuar a instalação do BadVpn pode demorar 15 minutos"
 bash bvpn
 echo "A instalação terminou, reinicie se servidor escrevendo reboot, depois inicie seu servidor usando tela subscreens. Escreva: ( screen ) depois de enter e escreva ( badudp ) para ativar as ligações whats app e jogos online, quaquer problema tente reiniciar os serviços Squid e SSH usando esses comandos"
-echo "/etc/init.d/squid3 force-reload"
+echo "/etc/init.d/squid3 restart"
 echo "/etc/init.d/ssh restart"
