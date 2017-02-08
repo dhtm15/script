@@ -2,8 +2,8 @@
 mIP=`wget http://ipecho.net/plain -O - -q ; echo`
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
-echo "acl ip dstdomain $mIP
-acl payload dstdomain -i '/etc/payloads'
+echo 'acl ip dstdomain $mIP
+acl payload dstdomain -i "/etc/payloads"
 acl local dstdomain localhost
 acl iplocal dstdomain 127.0.0.1
 acl netflix dstdomain .netflix.
@@ -34,4 +34,4 @@ visible_hostname RNEOXBRASIL
 http_access deny all
 
 via off
-forwarded_for off" > /etc/squid3/squid.conf
+forwarded_for off' > /etc/squid3/squid.conf
