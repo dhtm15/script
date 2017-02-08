@@ -35,7 +35,7 @@ wget https://raw.githubusercontent.com/RicKbrL/VpsPackPro/master/criarusuario
 mv criarusuario /bin/Usercreate
 chmod 755 /bin/Usercreate
 read -p "Aperte enter para reiniciar o squid3"
-/etc/init.d/squid3 force-reload
+/etc/init.d/squid3 restart
 read -p "Aperte enter para reiniciar o ssh"
 /etc/init.d/ssh restart
 read -p "Aperte enter para continuar a instalação do BadVpn pode demorar 15 minutos"
