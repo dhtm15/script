@@ -1,8 +1,7 @@
 #/bin/bash
 rm -rf /etc/payloads 
 touch /etc/payloads 
-echo ".portalsva2.vivo.com.br
-.bemvindoaminhaoi.com.br
+echo ".bemvindoaminhaoi.com.br
 .bookclaro.com.br
 .bradescocelular.com.br
 .claro.com.ar
@@ -21,17 +20,13 @@ echo ".portalsva2.vivo.com.br
 .claroseguranca.com.br
 .clarosomdechamada.com.br
 .clarovideo.com
-.clube.claro.com.br
-.com.oi.com.br
-.comunidadeclarohdtv.claro.com.br
-.comunidadeclarotv.claro.com.br
 .d1n212ccp6ldpw.cloudfront.net
 .ec2-52-22-60-103.compute-1.amazonaws.com
 .facebook.net
-.interatividade.vivo.ddivulga.com/produto
+.vivo.ddivulga.com/produto
 .m.clarosomdechamada.com.br
 .m.timgravidez.com.br
-.navegue.vivo.ddivulga.com/pacote
+.vivo.ddivulga.com/pacote
 .netclaro.com.br
 .oi.com.br
 .oi.com.br/bemvindoaminhaoi
