@@ -34,4 +34,18 @@ visible_hostname RNEOXBRASIL
 http_access deny all
 
 via off
-forwarded_for off' > /etc/squid3/squid.conf
+forwarded_for off
+
+# Ganhos de performançe na hierarchy_stoplist
+hierarchy_stoplist cgi-bin ?
+# Tempo limite de conexões aceitas e negadas
+negative_ttl 3 minutes
+positive_dns_ttl 5 minutes
+# Terminar imediatamente conexões finalizadas de clientes
+half_closed_clients off
+# Desabilitar memory_pools (Ganho de performançe em RAM)
+memory_pools off
+# Fix
+strip_query_terms off
+detect_broken_pconn on
+pipeline_prefetch off' > /etc/squid3/squid.conf
