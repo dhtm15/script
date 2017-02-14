@@ -34,6 +34,7 @@ read -p "Aperte enter para continuar para instalar fixs do VpsPack"
 wget https://raw.githubusercontent.com/RicKbrL/VpsPackPro/master/criarusuario
 mv criarusuario /bin/Usercreate
 chmod 755 /bin/Usercreate
+mv /bin/VpsPack /bin/menu
 read -p "Aperte enter para reiniciar o squid3"
 /etc/init.d/squid3 restart
 /etc/init.d/squid restart
@@ -44,3 +45,4 @@ bash bvpn
 echo "A instalação terminou, reinicie se servidor escrevendo reboot, depois inicie seu servidor usando tela subscreens. Escreva: ( screen ) depois de enter e escreva ( badudp ) para ativar as ligações whats app e jogos online, quaquer problema tente reiniciar os serviços Squid e SSH usando esses comandos"
 echo "/etc/init.d/squid3 restart"
 echo "/etc/init.d/ssh restart"
+echo "Para abrir o console interno digite: menu"
