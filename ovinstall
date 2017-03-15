@@ -292,7 +292,7 @@ ifconfig-pool-persist ipp.txt" > /etc/openvpn/server.conf
 		echo 'push "dhcp-option DNS 64.6.65.6"' >> /etc/openvpn/server.conf
 		;;
 	esac
-	echo "keepalive 10 120
+	echo "keepalive 10 20
 cipher AES-256-CBC
 comp-lzo
 user nobody
@@ -301,7 +301,11 @@ persist-key
 persist-tun
 status openvpn-status.log
 verb 3
-crl-verify crl.pem" >> /etc/openvpn/server.conf
+crl-verify crl.pem
+client-to-client
+client-cert-not-required
+username-as-common-name
+plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login" >> /etc/openvpn/server.conf
 	# Enable net.ipv4.ip_forward for the system
 	sed -i '/\<net.ipv4.ip_forward\>/c\net.ipv4.ip_forward=1' /etc/sysctl.conf
 	if ! grep -q "\<net.ipv4.ip_forward\>" /etc/sysctl.conf; then
@@ -388,7 +392,7 @@ proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
 remote $IP $PORT
-http-proxy-option CUSTOM-HEADER X-Online-Host  sdp.vivo.com.br
+http-proxy-option CUSTOM-HEADER X-Online-Host sdp.vivo.com.br
 http-proxy $IP 80
 resolv-retry infinite
 nobind
@@ -399,7 +403,10 @@ cipher AES-256-CBC
 comp-lzo
 setenv opt block-outside-dns
 key-direction 1
-verb 3" > /etc/openvpn/client-common.txt
+verb 3
+auth-user-pass
+keepalive 10 20
+float" > /etc/openvpn/client-common.txt
 	# Generates the custom client.ovpn
 	newclient "$CLIENT"
 	echo ""
