@@ -293,6 +293,7 @@ ifconfig-pool-persist ipp.txt" > /etc/openvpn/server.conf
 		;;
 	esac
 	echo "keepalive 10 20
+float
 cipher AES-256-CBC
 comp-lzo
 user nobody
