@@ -73,3 +73,4 @@ http_access deny all
 
 via off
 forwarded_for off' >> /etc/squid3/squid.conf
+rm squidconf
