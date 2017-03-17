@@ -3,8 +3,8 @@ IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 echo 'SQUID UBUNTU'
 rm -rf /etc/squid/squid.conf
 touch /etc/squid/squid.conf
-echo 'acl ip dstdomain $IP
-acl payload dstdomain -i "/etc/payloads"
+echo 'acl ip dstdomain '$IP > /etc/squid/squid.conf
+echo 'acl payload dstdomain -i "/etc/payloads"
 acl local dstdomain localhost
 acl iplocal dstdomain 127.0.0.1
 acl netflix dstdomain .netflix.
@@ -35,12 +35,13 @@ visible_hostname RNEOXBRASIL
 http_access deny all
 
 via off
-forwarded_for off' > /etc/squid/squid.conf
+forwarded_for off' >> /etc/squid/squid.conf
+
 echo 'SQUID DEBIAN'
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
-echo 'acl ip dstdomain $IP
-acl payload dstdomain -i "/etc/payloads"
+echo 'acl ip dstdomain '$IP > /etc/squid3/squid.conf
+echo 'acl payload dstdomain -i "/etc/payloads"
 acl local dstdomain localhost
 acl iplocal dstdomain 127.0.0.1
 acl netflix dstdomain .netflix.
@@ -71,4 +72,4 @@ visible_hostname RNEOXBRASIL
 http_access deny all
 
 via off
-forwarded_for off' > /etc/squid3/squid.conf
+forwarded_for off' >> /etc/squid3/squid.conf
