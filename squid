@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
