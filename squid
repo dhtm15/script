@@ -1,9 +1,9 @@
 #/bin/bash
-mIP=`wget http://ipecho.net/plain -O - -q ; echo`
+IP=$(wget -4qO- "http://whatismyip.akamai.com/")
 rm -rf /etc/squid3/squid.conf
 touch /etc/squid3/squid.conf
-echo 'acl ip dstdomain $mIP
-acl payload dstdomain -i "/etc/payloads"
+echo 'acl ip dstdomain '$IP > /etc/squid/squid.conf
+echo 'acl payload dstdomain -i "/etc/payloads"
 acl local dstdomain localhost
 acl iplocal dstdomain 127.0.0.1
 acl netflix dstdomain .netflix.
@@ -48,12 +48,12 @@ memory_pools off
 # Fix
 strip_query_terms off
 detect_broken_pconn on
-pipeline_prefetch off' > /etc/squid3/squid.conf
+pipeline_prefetch off' >> /etc/squid3/squid.conf
 
 rm -rf /etc/squid/squid.conf
 touch /etc/squid/squid.conf
-echo 'acl ip dstdomain $mIP
-acl payload dstdomain -i "/etc/payloads"
+echo 'acl ip dstdomain '$IP > /etc/squid/squid.conf
+echo 'acl payload dstdomain -i "/etc/payloads"
 acl local dstdomain localhost
 acl iplocal dstdomain 127.0.0.1
 acl netflix dstdomain .netflix.
@@ -98,4 +98,4 @@ memory_pools off
 # Fix
 strip_query_terms off
 detect_broken_pconn on
-pipeline_prefetch off' > /etc/squid/squid.conf
+pipeline_prefetch off' >> /etc/squid/squid.conf
