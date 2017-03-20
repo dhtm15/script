@@ -5,6 +5,7 @@ tput setaf 2 ; tput bold ; printf '%s' "criarusuario " ; tput setaf 7 ; printf '
 tput setaf 2 ; tput bold ; printf '%s' "mudardata " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Mudar a data de expiração de um usuário" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "remover " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Remover um usuário" ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "statusvpn " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Mostrar usuários ativos no OpenVPN" ; echo ""
+tput setaf 2 ; tput bold ; printf '%s' "speedtest-cli " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "SpeedTest para medir a potência do link do seu servidor" ; echo ""
 #tput setaf 2 ; tput bold ; printf '%s' "sshlimiter " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Limitador de conexões SSH simultâneas (deve ser executado em uma sessão screen)" ; echo ""
 #tput setaf 2 ; tput bold ; printf '%s' "sshmonitor " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Verifica o número de conexão simutânea de cada usuário" ; echo ""
 #tput setaf 2 ; tput bold ; printf '%s' "alterarlimite " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Alterar o número máximo de conexões simultâneas permitidas para um usuário" ; echo ""
